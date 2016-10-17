@@ -16,4 +16,4 @@
 ## 参考
 
 http://pytest.org/latest-ja/
-
+http://d.hatena.ne.jp/sinsoku/20100508/1273330972
