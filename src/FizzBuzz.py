@@ -4,6 +4,9 @@ class FizzBuzz:
         return
 
     def calc(self, arg):
+        if arg % 3 == 0 and arg % 5 == 0:
+            return 'FizzBuzz'
+
         if arg % 3 == 0:
             return 'Fizz'
 
