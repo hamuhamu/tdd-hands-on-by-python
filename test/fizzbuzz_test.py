@@ -7,3 +7,4 @@ def test_受け取った数値をそのまま返すこと():
     fizzBuzz = FizzBuzz()
 
     assert 1 == fizzBuzz.calc(1)
+    assert 2 == fizzBuzz.calc(2)

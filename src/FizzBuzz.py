@@ -4,4 +4,4 @@ class FizzBuzz:
         return
 
     def calc(self, arg):
-        return 1
+        return arg
