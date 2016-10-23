@@ -22,8 +22,11 @@ def test_５の倍数のときは数の代わりにBuzzを返すこと():
     assert 'Buzz' == fizzBuzz.calc(5)
     assert 'Buzz' == fizzBuzz.calc(10)
 
-def test_３と５両方の倍数の場合にはFizzBuzzを返すこと():
+@pytest.mark.parametrize(('arg', 'expected'), [
+    (15, 'FizzBuzz'),
+    (30, 'FizzBuzz'),
+])
+def test_３と５両方の倍数の場合にはFizzBuzzを返すこと(arg, expected):
     fizzBuzz = FizzBuzz()
 
-    assert 'FizzBuzz' == fizzBuzz.calc(15)
-    assert 'FizzBuzz' == fizzBuzz.calc(30)
+    assert expected == fizzBuzz.calc(arg)
