@@ -1,8 +1,19 @@
 import pytest
-import src.sample
+import sys
+sys.path.append('src/')
+from sample import Sample
 
-def test_set_comparison():
-    set1 = set("1308")
-    set2 = set("8035")
+def test_１件テストできること():
+    sample = Sample();
 
-    assert set1 == set2
+    assert 8 == sample.calc(2, 4)
+
+@pytest.mark.parametrize(('x', 'y', 'expected'), [
+    (4, 3, 12),
+    (3, 2, 6),
+    (22, 2, 44),
+])
+def test_複数件テストできること(x, y, expected):
+    sample = Sample();
+
+    assert sample.calc(x, y) == expected
