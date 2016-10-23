@@ -9,24 +9,19 @@ def test_受け取った数値をそのまま返すこと():
     assert 1 == fizzBuzz.calc(1)
     assert 2 == fizzBuzz.calc(2)
 
-def test_３の倍数のときは数の代わりにFizzを返すこと():
-    fizzBuzz = FizzBuzz()
-
-    assert 'Fizz' == fizzBuzz.calc(3)
-    assert 'Fizz' == fizzBuzz.calc(6)
-    assert 'Fizz' == fizzBuzz.calc(9)
-
-def test_５の倍数のときは数の代わりにBuzzを返すこと():
-    fizzBuzz = FizzBuzz()
-
-    assert 'Buzz' == fizzBuzz.calc(5)
-    assert 'Buzz' == fizzBuzz.calc(10)
-
 @pytest.mark.parametrize(('arg', 'expected'), [
+    (1, 1),
+    (2, 2),
+    (3, 'Fizz'),
+    (4, 4),
+    (6, 'Fizz'),
+    (9, 'Fizz'),
+    (5, 'Buzz'),
+    (10, 'Buzz'),
     (15, 'FizzBuzz'),
     (30, 'FizzBuzz'),
 ])
-def test_３と５両方の倍数の場合にはFizzBuzzを返すこと(arg, expected):
+def test_受け取った数値をそのまま返すただし３の倍数の場合はFizzを５の倍数の場合はBuzzを３と５両方の倍数の場合にはFizzBuzzを返すこと(arg, expected):
     fizzBuzz = FizzBuzz()
 
     assert expected == fizzBuzz.calc(arg)
