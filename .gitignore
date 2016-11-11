@@ -90,4 +90,9 @@ ENV/
 # Rope project settings
 .ropeproject
 
+# selfcheck file
+pip-selfcheck.json
 
+# python
+bin/
+include/
