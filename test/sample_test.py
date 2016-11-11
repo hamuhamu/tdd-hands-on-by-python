@@ -1,7 +1,7 @@
+from src.sample import Sample
 import pytest
 import sys
-sys.path.append('src/')
-from sample import Sample
+
 
 def test_１件テストできること():
     sample = Sample();
