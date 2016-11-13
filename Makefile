@@ -8,4 +8,4 @@ install:
 	${PIP} install -r requirements.txt
 
 test:
-	${PYTHON} -m pytest test/
+	${PYTHON} -m pytest -v test/
